@@ -15,6 +15,8 @@ const postRouter = require('./routes/posts')
 
 app.use('/set', postRouter)
 
+app.use(express.static('src/public'))
+
 app.listen(PORT, () => {
   console.info(`App listening on port ${PORT}`)
 })

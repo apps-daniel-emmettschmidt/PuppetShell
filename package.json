@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/apps-daniel-emmettschmidt/PuppetShell/issues"
   },
-  "homepage": "https://github.com/apps-daniel-emmettschmidt/PuppetShell#readme"
+  "homepage": "https://github.com/apps-daniel-emmettschmidt/PuppetShell#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0"
+  }
 }

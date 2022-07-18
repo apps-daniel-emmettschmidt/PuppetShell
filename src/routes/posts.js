@@ -5,10 +5,9 @@ const reader = express.Router()
 
 reader.get('/', (req, res, next) => {
 
-    const address = req.body;
+  const address = req.query.address;
 
-
-  res.send('test' + req.address);
+  res.send('Heard ' + address);
     // 'You have hit GET /posts endpoint')
 })
 

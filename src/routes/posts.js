@@ -26,18 +26,15 @@ async function setGetPage(address, waitFor)
 
     await page.goto(address);
 
-    if(waitFor === undefined)
-    {
-      await page.waitForNavigation();
-    }
-    else
+    if((waitFor === undefined) == false)
     {
       await page.waitForSelector(waitFor);
     }
 
-    console.log("Done navigating to " + address);
+    const html = await page.content();
 
-
+    console.log(html);
+    
   } catch (err) {
       console.log("Could not create a browser instance => : ", err);
   }

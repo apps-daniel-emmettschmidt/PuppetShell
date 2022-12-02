@@ -15,8 +15,10 @@ async function setGetPage(address, waitFor)
   try {
     console.log("Opening the browser......");
     const browser = await puppeteer.launch({
-        headless: false,
-        args: ["--disable-setuid-sandbox"],
+    args: ['--no-sandbox'],
+        executablePath: '/usr/bin/google-chrome',
+        headless: true,
+        args: ["--no-sandbox"],
         'ignoreHTTPSErrors': true
     });
 

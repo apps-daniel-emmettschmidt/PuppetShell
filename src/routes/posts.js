@@ -15,14 +15,15 @@ async function setGetPage(address, waitFor)
   try {
     console.log("Opening the browser......");
     const browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
+        args: ['--no-sandbox'],
         executablePath: '/usr/bin/google-chrome',
         headless: true,
-        args: ["--no-sandbox"],
         'ignoreHTTPSErrors': true
     });
 
     const page = await browser.newPage();
+
+    page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.75 Safari/537.36');
 
     page.setDefaultNavigationTimeout(240000);
 
